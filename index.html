@@ -6,22 +6,20 @@
   <title>Conner Reiter | Software Developer</title>
   <meta name="description" content="Portfolio of Conner Reiter — Software Developer and Computer Science Student." />
 
-  <!-- Optional: Google Font (serif like your mom's site). If you want zero external dependencies, delete this link. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      /* Palette inspired by your mom's site (warm, soft, professional) */
-      --bg: #f3efe8;        /* warm beige */
-      --ink: #3f3a35;       /* dark taupe text */
-      --muted: #6a625b;     /* secondary text */
-      --line: #cfc6bb;      /* divider line */
-      --panel: #ebe4da;     /* soft card */
-      --accent: #7f8d78;    /* muted green */
-      --accent2: #85776b;   /* muted brown */
-      --button: #f7f2ea;    /* button background */
+      --bg: #f3efe8;
+      --ink: #3f3a35;
+      --muted: #6a625b;
+      --line: #cfc6bb;
+      --panel: #ebe4da;
+      --accent: #7f8d78;
+      --accent2: #85776b;
+      --button: #f7f2ea;
       --shadow: rgba(0,0,0,0.18);
       --radius: 18px;
       --max: 960px;
@@ -37,7 +35,6 @@
       line-height: 1.65;
     }
 
-    /* Top Wix-like bar spacing (you won't have the Wix bar, but keep header clean) */
     header{
       position: sticky;
       top: 0;
@@ -88,14 +85,8 @@
       color: var(--ink);
     }
 
-    /* Section styling like your mom’s: centered, generous spacing, dividers */
-    section{
-      padding: 44px 0;
-    }
-
-    .center{
-      text-align:center;
-    }
+    section{ padding: 44px 0; }
+    .center{ text-align:center; }
 
     .title{
       font-family: "Cormorant Garamond", Georgia, serif;
@@ -157,7 +148,7 @@
       color: var(--ink);
       text-decoration:none;
       font-weight: 600;
-      box-shadow: 0 10px 0 rgba(0,0,0,0.12); /* mimics that “raised pill” look */
+      box-shadow: 0 10px 0 rgba(0,0,0,0.12);
       transition: transform 140ms ease, box-shadow 140ms ease;
     }
     .btn:hover{
@@ -170,7 +161,6 @@
       font-weight: 600;
     }
 
-    /* Cards for projects (still professional) */
     .grid{
       display:grid;
       grid-template-columns: repeat(12, 1fr);
@@ -184,18 +174,22 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 16px 16px 14px;
+      text-align: left;
     }
 
     .card h3{
       margin: 0 0 8px;
       font-size: 16px;
       letter-spacing: 0.3px;
+      color: var(--ink);
     }
 
     .card p{
       margin: 0 0 10px;
       color: var(--muted);
       font-size: 14px;
+      font-family: Inter, system-ui, sans-serif;
+      font-style: normal;
     }
 
     .tags{
@@ -232,7 +226,6 @@
       border-bottom-color: var(--ink);
     }
 
-    /* Skills list like a calm centered block */
     .skills{
       max-width: 860px;
       margin: 0 auto;
@@ -242,9 +235,7 @@
       padding: 18px;
       text-align:center;
     }
-    .skills strong{
-      color: var(--ink);
-    }
+
     .skillchips{
       display:flex;
       flex-wrap: wrap;
@@ -261,11 +252,10 @@
       font-size: 13px;
     }
 
-    /* “References” block inspired by her quote cards, but make it dev-appropriate */
     .quote{
       max-width: 720px;
       margin: 0 auto;
-      background: rgba(130,120,110,0.18); /* taupe wash */
+      background: rgba(130,120,110,0.18);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: 18px 18px 16px;
@@ -283,72 +273,6 @@
       letter-spacing: 0.4px;
     }
 
-    /* Contact section that resembles her form look */
-    .contact-panel{
-      max-width: 720px;
-      margin: 0 auto;
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      overflow:hidden;
-      background: rgba(120,110,100,0.35);
-    }
-    .contact-head{
-      padding: 18px 16px;
-      text-align:center;
-      color: var(--bg);
-      font-family: "Cormorant Garamond", Georgia, serif;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-size: 28px;
-      background: rgba(120,110,100,0.62);
-      position: relative;
-    }
-    .contact-head::before,
-    .contact-head::after{
-      content:"";
-      position:absolute;
-      top: 50%;
-      width: 120px;
-      height: 2px;
-      background: rgba(255,255,255,0.6);
-      transform: translateY(-50%);
-    }
-    .contact-head::before{ left: 18px; }
-    .contact-head::after{ right: 18px; }
-
-    form{
-      padding: 16px;
-      display:grid;
-      gap: 12px;
-      background: rgba(243,239,232,0.35);
-    }
-
-    input, textarea{
-      width:100%;
-      padding: 12px 12px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(233,228,218,0.9);
-      color: var(--ink);
-      font-size: 14px;
-      font-family: Inter, system-ui, sans-serif;
-      outline: none;
-    }
-    textarea{ min-height: 120px; resize: vertical; }
-
-    .submit-row{
-      display:flex;
-      justify-content:flex-end;
-      gap: 10px;
-    }
-
-    .note{
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 10px;
-      text-align:center;
-    }
-
     footer{
       border-top: 1px solid var(--line);
       padding: 18px 0 34px;
@@ -357,10 +281,8 @@
       font-size: 13px;
     }
 
-    /* Responsive */
     @media (max-width: 860px){
       .card{ grid-column: span 12; }
-      .contact-head::before, .contact-head::after{ width: 70px; }
     }
   </style>
 </head>
@@ -374,7 +296,7 @@
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <a href="#values">Values</a>
         </nav>
       </div>
     </div>
@@ -384,15 +306,12 @@
     <!-- HERO -->
     <section class="wrap center" id="top">
       <div class="title">HI! I’M CONNER</div>
-      <div class="subtitle">
-        Software Developer · Computer Science Student at PFW
-      </div>
+      <div class="subtitle">Software Developer · Computer Science Student at PFW</div>
 
       <div class="pill-row">
-        <!-- Replace YOUR_GITHUB_USERNAME -->
-        <a class="btn" href="#projects">My Projects</a>
-        <a class="btn secondary" href="https://github.com/ConnerRGit" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn secondary" href="mailto:reitca02@pfw.edu">reitca02@pfw.edu</a>
+        <a class="btn secondary" href="#projects">My Projects</a>
+        <a class="btn secondary" href="https://github.com/ConnerRgit" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn secondary" href="mailto:connerr1978@gmail.com">Contact Me</a>
       </div>
 
       <div class="divider" aria-hidden="true" style="margin-top:34px;">
@@ -431,57 +350,36 @@
       </p>
 
       <div class="grid">
-        <!-- Replace placeholders with your real projects -->
         <article class="card">
           <h3>Tropos</h3>
-          <p>Tropos is a Machine Learning Project created by Lauren Robison, Joshua Carlson, and myself. The goal of Tropos is to train an AI model to give personalized feedback on their college-level papers, mimicking the feedback style of the instructor of the course</p>
+          <p>
+            Tropos is a Machine Learning project created by Lauren Robison, Joshua Carlson, and myself.
+            The goal is to train an AI model to give personalized feedback on college-level papers, mimicking an instructor’s feedback style.
+          </p>
           <ul class="tags">
             <li class="tag">AI</li>
             <li class="tag">Python</li>
             <li class="tag">Research</li>
           </ul>
           <div class="links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO" target="_blank" rel="noreferrer">View Code</a>
+            <a href="https://github.com/ML-name/project" target="_blank" rel="noreferrer">View Code</a>
             <a href="#" target="_blank" rel="noreferrer">Demo (optional)</a>
           </div>
         </article>
 
         <article class="card">
           <h3>ClusterGit</h3>
-          <p>ClusterGit is an in-progess project I am working on in a Capstone group. It is a cluster of five raspberry pi 5's. It's a git-like application where students can submit large game-files above 100mB.</p>
+          <p>
+            ClusterGit is an in-progress capstone project: a cluster of five Raspberry Pi 5s providing a Git-like workflow
+            for students to submit large game files (above 100MB).
+          </p>
           <ul class="tags">
             <li class="tag">Python</li>
-            <li class="tag">Raspberry Pi's Cluster</li>
+            <li class="tag">Raspberry Pi Cluster</li>
             <li class="tag">Database</li>
           </ul>
           <div class="links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO" target="_blank" rel="noreferrer">View Code</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Project Title (Replace Me)</h3>
-          <p>1–2 sentences: if you used SQL, mention what you stored and queried.</p>
-          <ul class="tags">
-            <li class="tag">SQL</li>
-            <li class="tag">C#</li>
-            <li class="tag">CRUD</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO" target="_blank" rel="noreferrer">View Code</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Project Title (Replace Me)</h3>
-          <p>1–2 sentences: algorithms/data structures project? Mention performance or complexity.</p>
-          <ul class="tags">
-            <li class="tag">C++</li>
-            <li class="tag">Algorithms</li>
-            <li class="tag">Performance</li>
-          </ul>
-          <div class="links">
-            <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO" target="_blank" rel="noreferrer">View Code</a>
+            <a href="https://github.com/LaurenIsLearning/ClusterGit" target="_blank" rel="noreferrer">View Code</a>
           </div>
         </article>
       </div>
@@ -492,9 +390,7 @@
       <div class="divider"><span>Technical Skills</span></div>
 
       <div class="skills">
-        <div style="color:var(--muted); font-size: 14px;">
-          Programming Languages (as listed on resume):
-        </div>
+        <div style="color:var(--muted); font-size: 14px;">Programming Languages:</div>
         <div class="skillchips" aria-label="Skills list">
           <span class="chip">C</span>
           <span class="chip">C++</span>
@@ -508,48 +404,16 @@
       </div>
     </section>
 
-    <!-- OPTIONAL: “Reference” style section (keep it professional; remove if you want) -->
+    <!-- VALUES -->
     <section class="wrap center" id="values">
       <div class="divider"><span>What I Value</span></div>
 
       <div class="quote">
         <p>
-          “I care about building software that is understandable, testable, and useful — not just code that ‘works’ once.”
+          “I care about building software that is useful and efficient. Even more so, I value respect, growth, and responsibility both personally and professionally.”
         </p>
-        <div class="by">Engineering mindset · Clean code · Practical outcomes</div>
+        <div class="by">Growth mindset · Clean code · Hard work</div>
       </div>
-
-      <div class="note">
-        If you hate this section, delete it. It’s optional.
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="wrap center" id="contact">
-      <div class="divider"><span>Contact</span></div>
-
-      <div class="contact-panel">
-        <div class="contact-head">Contact</div>
-
-        <!-- NOTE: This form won't actually send anywhere unless you connect a backend or service.
-             For now it's just a styled form (fine for portfolios). -->
-        <form onsubmit="event.preventDefault(); alert('This form is a placeholder. Use the email link instead.');">
-          <input type="text" name="name" placeholder="Name" autocomplete="name" />
-          <input type="email" name="email" placeholder="Email" autocomplete="email" />
-          <input type="text" name="subject" placeholder="Subject" />
-          <textarea name="message" placeholder="Message"></textarea>
-
-          <div class="submit-row">
-            <a class="btn secondary" href="mailto:reitca02@pfw.edu">Email Me Instead</a>
-            <button class="btn" type="submit">Submit</button>
-          </div>
-        </form>
-      </div>
-
-      <p class="note">
-        Prefer direct contact: <a href="mailto:reitca02@pfw.edu" style="color:var(--accent2); text-decoration: none; border-bottom: 1px dotted var(--accent2);">reitca02@pfw.edu</a>
-        · GitHub: <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noreferrer" style="color:var(--accent2); text-decoration: none; border-bottom: 1px dotted var(--accent2);">YOUR_GITHUB_USERNAME</a>
-      </p>
     </section>
 
     <footer class="wrap">
